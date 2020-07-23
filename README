@@ -1,0 +1,27 @@
+This repository contains tests with:
+- rest-assured framework
+- TestNG
+To run tests you need JDK 11.
+
+tests for calculator Test cases are here
+ - https://docs.google.com/spreadsheets/d/1jhCeoXurJMMd8zc9I0AdeEecHJm55R6J2NDw8mdPCVY/edit#gid=0
+
+Dependencies for Maven project:
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>rest-assured</artifactId>
+    <version>4.3.0</version>
+    <scope>test</scope>
+</dependency>
+To run tests with TestNG add:
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>6.14.3</version>
+    <scope>test</scope>
+</dependency>
+
+We can send a GET call to http://localhost:8080/calc.
+All operations are made one by one, only integers are accepted, "/" is necessary to divide values.
+Example: http://localhost:8080/calc/+1/-2/*5 = -5.
+
