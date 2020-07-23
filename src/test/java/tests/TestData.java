@@ -120,7 +120,19 @@ public class TestData {
 			{"-2.0"},
 			{"1,0"},
 			{"%60"},
+			{"\\(2)"},
+			{"\\+1"},
+			{"2^2"},
 			{"\\(2)"}
+	 	};
+	}
+	
+	@DataProvider(name = "invalid_params")
+	public Object[][] testData_0(){
+		return new Object[][] {
+			{"\\+1"},
+			{"2^2"},
+			{"\\(2)"},{"OI"}
 	 	};
 	}
 	
